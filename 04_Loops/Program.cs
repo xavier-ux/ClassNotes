@@ -21,7 +21,7 @@ namespace _04_Loops
             total = 0;
             while (true)
             {
-                if(total == 10)
+                if (total == 10)
                 {
                     Console.WriteLine("You did it!");
                     break;
@@ -44,19 +44,19 @@ namespace _04_Loops
                 if (someCount == 15)
                 {
                     keepLooping = false;
-                } 
+                }
             }
 
 
             // For Loop
             int studentCount = 5;
-            for(int i = 0; i < studentCount; i++)
+            for (int i = 0; i < studentCount; i++)
             {
                 Console.WriteLine(i);
             }
 
             string[] students = { "Nick", "Adam", "AJ", "Austin", "Severa", "Tim" };
-            for(int i=0;i < students.Length; i++)
+            for (int i = 0; i < students.Length; i++)
             {
                 Console.WriteLine($"Hello there! {students[i]}!");
             }
@@ -68,9 +68,9 @@ namespace _04_Loops
             }
 
             string myName = "Amanda Joy Knight";
-            foreach(char letter in myName)
+            foreach (char letter in myName)
             {
-                if(letter != ' ')
+                if (letter != ' ')
                 {
                     Console.WriteLine(letter);
                 }
@@ -97,6 +97,9 @@ namespace _04_Loops
                 Console.WriteLine("This is a test");
             }
             Console.ReadKey();
+
+            iterator = 33;
         }
     }
+
 }
