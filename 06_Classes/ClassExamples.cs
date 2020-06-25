@@ -63,6 +63,8 @@ namespace _06_Classes
             }
         }
 
+        public Vehicle Transport { get; set; }
+
         public Person(string firstName, string lastName, DateTime birthday)
         {
             FirstName = firstName;

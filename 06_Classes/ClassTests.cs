@@ -35,9 +35,16 @@ namespace _06_Classes
         [TestMethod]
         public void PersonTests()
         {
-            Person personTwo = new Person("Appa","YipYip",new DateTime(2001,06,11));
+            Person personTwo = new Person("Appa","YipYip",new DateTime(1805,06,11));
             Console.WriteLine(personTwo.AgeInYears);
             Console.WriteLine(personTwo.FullName);
+
+            Person newPerson = new Person("Zuko", "FireLord", new DateTime(1990, 06, 22));
+            newPerson.Transport = new Vehicle("Pontiac", "Firebird", 1989, 100123, "Red & Gold", VehicleType.Car);
+            Console.WriteLine(newPerson.Transport.Model);
+
+            Assert.AreEqual("Zuko FireLord", newPerson.FullName);
+
         }
     }
 }
