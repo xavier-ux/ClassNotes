@@ -45,6 +45,8 @@ namespace _05_Methods
             return sum;
         }
 
+
+
         private int CalculateAge(DateTime birthday)
         {
             TimeSpan ageSpan = DateTime.Now - birthday;
