@@ -46,5 +46,12 @@ namespace _06_Classes
             Assert.AreEqual("Zuko FireLord", newPerson.FullName);
 
         }
+
+        [TestMethod]
+        public void Testing()
+        {
+            int testing = 4;
+            Assert.AreEqual(testing, 4);
+        }
     }
 }
