@@ -18,5 +18,19 @@ namespace _07_RepositoryPattern_Tests
 
             Assert.AreEqual(expected, actual);
         }
+
+        [DataTestMethod]
+        [DataRow(GenreType.Thriller)]
+        [DataRow(GenreType.Romance)]
+        [DataRow(GenreType.Comedy)]
+        public void SetGenre_ShouldSetCorrectGenre(GenreType typeOfGenre)
+        {
+            //Arrange 
+            StreamingContent content = new StreamingContent();
+            //Act
+            content.TypeOfGenre = typeOfGenre;
+            //Assert 
+            Assert.AreEqual(typeOfGenre, content.TypeOfGenre);
+        }
     }
 }

@@ -8,7 +8,7 @@ namespace _07_RepositoryPattern_Repository
 {
     public enum GenreType
     {
-        Horror =1,
+        Horror = 1,
         SciFi,
         Drama,
         Action,
@@ -18,23 +18,58 @@ namespace _07_RepositoryPattern_Repository
         Thriller,
         Romance
     }
+    public enum MaturityRating
+    {
+        G,
+        PG,
+        PG_13,
+        R,
+        NC_17,
+        TV_MA
+    }
     public class StreamingContent
     {
         public string Title { get; set; }
         public string Description { get; set; }
-        public string MaturityRating { get; set; }
+        public MaturityRating MaturityRating { get; set; }
         public int StarRating { get; set; }
-        public bool IsFamilyFriendly { get; set; }
+        public bool IsFamilyFriendly
+        {
+            get
+            {
+                switch (MaturityRating)
+                {
+                    case MaturityRating.G:
+                    case MaturityRating.PG:
+                        return true;
+                    case MaturityRating.PG_13:
+                    case MaturityRating.R:
+                    case MaturityRating.NC_17:
+                    case MaturityRating.TV_MA:
+                    default:
+                        return false;
+                }
+                //Another way to do this 
+                if((int)MaturityRating > 1)
+                {
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+
+            }
+        }
         public GenreType TypeOfGenre { get; set; }
 
         public StreamingContent() { }
-        public StreamingContent(string title,string description,string maturityRating, int starRating,bool isFamilyFriendly,GenreType typeOfGenre)
+        public StreamingContent(string title, string description, MaturityRating maturityRating, int starRating, GenreType typeOfGenre)
         {
             Title = title;
             Description = description;
             MaturityRating = maturityRating;
             StarRating = starRating;
-            IsFamilyFriendly = isFamilyFriendly;
             TypeOfGenre = typeOfGenre;
         }
     }
