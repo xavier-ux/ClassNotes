@@ -21,6 +21,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05_Methods", "05_Methods\05
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06_Classes", "06_Classes\06_Classes.csproj", "{4C7311C0-B97B-496A-9FD4-13B28BA0CD92}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07_RepositoryPattern_Tests", "07_RepositoryPattern_Tests\07_RepositoryPattern_Tests.csproj", "{7635AD9C-3AC3-4222-BCE8-FF2AFB210E4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07_RepositoryPattern_Repository", "07_RepositoryPattern_Repository\07_RepositoryPattern_Repository.csproj", "{A6F5545A-8029-4D12-A342-180618C694A0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +67,14 @@ Global
 		{4C7311C0-B97B-496A-9FD4-13B28BA0CD92}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C7311C0-B97B-496A-9FD4-13B28BA0CD92}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C7311C0-B97B-496A-9FD4-13B28BA0CD92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7635AD9C-3AC3-4222-BCE8-FF2AFB210E4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7635AD9C-3AC3-4222-BCE8-FF2AFB210E4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7635AD9C-3AC3-4222-BCE8-FF2AFB210E4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7635AD9C-3AC3-4222-BCE8-FF2AFB210E4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6F5545A-8029-4D12-A342-180618C694A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6F5545A-8029-4D12-A342-180618C694A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6F5545A-8029-4D12-A342-180618C694A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6F5545A-8029-4D12-A342-180618C694A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
