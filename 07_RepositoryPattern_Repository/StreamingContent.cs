@@ -58,7 +58,6 @@ namespace _07_RepositoryPattern_Repository
                 {
                     return true;
                 }
-
             }
         }
         public GenreType TypeOfGenre { get; set; }
