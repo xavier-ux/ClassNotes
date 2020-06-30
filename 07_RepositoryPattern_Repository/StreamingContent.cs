@@ -71,5 +71,7 @@ namespace _07_RepositoryPattern_Repository
             StarRating = starRating;
             TypeOfGenre = typeOfGenre;
         }
+
+       
     }
 }

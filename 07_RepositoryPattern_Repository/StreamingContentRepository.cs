@@ -64,5 +64,18 @@ namespace _07_RepositoryPattern_Repository
         // Get By Rating
         // Get By Family Friendly
         // Etc
+        public List<StreamingContent> GetContentByIsFamilyFriendly(bool isFamilyFriendly)
+        {
+            List<StreamingContent> sortedList = new List<StreamingContent>();
+            foreach(StreamingContent content in _contentDirectory)
+            {
+                if (content.IsFamilyFriendly == isFamilyFriendly)
+                {
+                    sortedList.Add(content);
+                }
+            }
+            return sortedList;
+        }
+
     }
 }
