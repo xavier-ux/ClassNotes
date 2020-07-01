@@ -17,6 +17,11 @@ namespace _08_Inheritance_Tests
             Liger oneLiger = new Liger();
             oneLiger.MakeSounds();
             oneLiger.Move();
+
+            //Animal oneAnimal = new Animal();
+            //oneAnimal.HasFur = false;
+
+
         }
     }
 }

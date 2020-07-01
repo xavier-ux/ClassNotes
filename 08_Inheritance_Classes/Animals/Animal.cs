@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace _08_Inheritance_Classes.Animals
 {
     public enum DietType { Herbivore =1, Omnivore, Carnivore, Insectivore}
-    public class Animal
+    public abstract class Animal
     {
         public int NumberOfLegs { get; set; }
         public bool IsMammal { get; set; }
