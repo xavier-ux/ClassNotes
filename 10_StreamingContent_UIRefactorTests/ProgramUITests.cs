@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace _10_StreamingContent_UIRefactorTests
 {
     [TestClass]
-    public class UnitTest1
+    public class ProgramUITests
     {
         [TestMethod]
         public void TestMethod1()
