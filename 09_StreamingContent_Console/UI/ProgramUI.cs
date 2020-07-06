@@ -10,7 +10,13 @@ namespace _09_StreamingContent_Console.UI
 {
     public class ProgramUI
     {
+        private readonly IConsole _console;
         private readonly StreamingRepository _streamingRepo = new StreamingRepository();
+        
+        public ProgramUI(IConsole console)
+        {
+            _console = console;
+        }
         public void Run()
         {
             SeedContentList();
@@ -22,15 +28,15 @@ namespace _09_StreamingContent_Console.UI
             bool continueToRun = true;
             while (continueToRun)
             {
-                Console.Clear();
-                Console.WriteLine(
+                _console.Clear();
+                _console.WriteLine(
                     "Enter the number of the option you'd like to select: \n" +
                     "1. Show all streaming content \n" +
                     "2. Find streaming content by title \n" +
                     "3. Add new streaming content \n" +
                     "4. Remove streaming content \n" +
                     "5. Exit");
-                string userInput = Console.ReadLine();
+                string userInput = _console.ReadLine();
                 switch (userInput)
                 {
                     case "1":
@@ -54,9 +60,9 @@ namespace _09_StreamingContent_Console.UI
                         continueToRun = false;
                         break;
                     default:
-                        Console.WriteLine("Please enter a valid number between 1 and 5. \n" +
+                        _console.WriteLine("Please enter a valid number between 1 and 5. \n" +
                             "Press any key to continue....");
-                        Console.ReadKey();
+                        _console.ReadKey();
                         break;
                 }
             }
@@ -64,25 +70,25 @@ namespace _09_StreamingContent_Console.UI
 
         private void CreateNewContent()
         {
-            Console.Clear();
+            _console.Clear();
             StreamingContent content = new StreamingContent();
             // title
-            Console.WriteLine("Please enter the title of the content: ");
-            content.Title = Console.ReadLine();
+            _console.WriteLine("Please enter the title of the content: ");
+            content.Title = _console.ReadLine();
 
             //description
-            Console.WriteLine("Please enter the description: ");
-            content.Description = Console.ReadLine();
+            _console.WriteLine("Please enter the description: ");
+            content.Description = _console.ReadLine();
 
             //MRating 
-            Console.WriteLine("Select a Maturity Rating: \n" +
+            _console.WriteLine("Select a Maturity Rating: \n" +
                 "1) G \n" +
                 "2) PG \n" +
                 "3) PG 13 \n" +
                 "4) R \n" +
                 "5) NC 17 \n" +
                 "6) TV MA");
-            string maturityString = Console.ReadLine();
+            string maturityString = _console.ReadLine();
             switch (maturityString)
             {
                 case "1":
@@ -105,11 +111,11 @@ namespace _09_StreamingContent_Console.UI
                     break;
             }
             //star rating
-            Console.WriteLine("Please enter the star-rating (1-5): ");
-            content.StarRating = int.Parse(Console.ReadLine());
+            _console.WriteLine("Please enter the star-rating (1-5): ");
+            content.StarRating = int.Parse(_console.ReadLine());
             //type of genre
 
-            Console.WriteLine("Select a Genre: \n" +
+            _console.WriteLine("Select a Genre: \n" +
                 "1: Horror \n" +
                 "2: Sci-Fi \n" +
                 "3: Drama \n" +
@@ -119,30 +125,30 @@ namespace _09_StreamingContent_Console.UI
                 "7: Documentary \n" +
                 "8: Thriller \n" +
                 "9: Romance");
-            string genreInput = Console.ReadLine();
+            string genreInput = _console.ReadLine();
             int genreID = int.Parse(genreInput);
             content.TypeOfGenre = (GenreType)genreID;
             _streamingRepo.AddContentToDirectory(content);
         }
         private void ShowAllContent()
         {
-            Console.Clear();
+            _console.Clear();
             List<StreamingContent> listOfContent = _streamingRepo.GetContents();
 
             foreach (StreamingContent contentVariable in listOfContent)
             {
                 DisplayContent(contentVariable);
-                Console.WriteLine("-----------------------");
+                _console.WriteLine("-----------------------");
             }
 
-            Console.WriteLine("Press any key to continue...");
-            Console.ReadKey();
+            _console.WriteLine("Press any key to continue...");
+            _console.ReadKey();
         }
         private void ShowContentByTitle()
         {
-            Console.Clear();
-            Console.WriteLine("Enter a title");
-            string title = Console.ReadLine();
+            _console.Clear();
+            _console.WriteLine("Enter a title");
+            string title = _console.ReadLine();
             StreamingContent foundTitle = _streamingRepo.GetContentByTitle(title);
             if (foundTitle != null)
             {
@@ -150,50 +156,50 @@ namespace _09_StreamingContent_Console.UI
             }
             else
             {
-                Console.WriteLine("Invalid title. Cound not find any results.");
+                _console.WriteLine("Invalid title. Cound not find any results.");
             }
-            Console.WriteLine("Press any key to continue");
-            Console.ReadKey();
+            _console.WriteLine("Press any key to continue");
+            _console.ReadKey();
         }
         private void RemoveContentFromList()
         {
-            Console.WriteLine("Which item would you like to remove?");
+            _console.WriteLine("Which item would you like to remove?");
             List<StreamingContent> contentList = _streamingRepo.GetContents();
             int count = 0;
             foreach (StreamingContent content in contentList)
             {
                 count++;
-                Console.WriteLine($"{count}. {content.Title}");
+                _console.WriteLine($"{count}. {content.Title}");
             }
 
             var thing = new List<Show>();
             var other = thing.ToList<StreamingContent>();
            
 
-            int targetContentId = int.Parse(Console.ReadLine());
+            int targetContentId = int.Parse(_console.ReadLine());
             int targetIndex = targetContentId - 1;
             if(targetIndex >= 0 && targetIndex < contentList.Count)
             {
                 StreamingContent desiredContent = contentList[targetIndex];
                 if (_streamingRepo.DeleteExistingContent(desiredContent))
                 {
-                    Console.WriteLine($"{desiredContent.Title} successfully removed.");
+                    _console.WriteLine($"{desiredContent.Title} successfully removed.");
                 }
                 else
                 {
-                    Console.WriteLine("I'm sorry, Dave. I'm afraid I can't do that.");
+                    _console.WriteLine("I'm sorry, Dave. I'm afraid I can't do that.");
                 }
             }
             else
             {
-                Console.WriteLine("No content has that ID");
+                _console.WriteLine("No content has that ID");
             }
-            Console.WriteLine("Press any key to continue....");
-            Console.ReadKey();
+            _console.WriteLine("Press any key to continue....");
+            _console.ReadKey();
         }
         private void DisplayContent(StreamingContent content)
         {
-            Console.WriteLine($"Title: {content.Title} \n" +
+            _console.WriteLine($"Title: {content.Title} \n" +
                 $"Description: {content.Description} \n" +
                 $"Genre: {content.TypeOfGenre} \n" +
                 $"Stars: {content.StarRating} \n" +
