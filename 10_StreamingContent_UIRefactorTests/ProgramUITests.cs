@@ -41,5 +41,27 @@ namespace _10_StreamingContent_UIRefactorTests
             //Assert
             Assert.IsTrue(console.Output.Contains(customDesc));
         }
+
+        [TestMethod]
+        public void RemoveFromList_ShouldSeeRemovedMessage()
+        {
+            //Arragne
+            var commandList = new List<string> { "4", "2", "1", "5" };
+            var console = new MockConsole(commandList);
+            var ui = new ProgramUI(console);
+
+            //ACT
+            ui.Run();
+            Console.WriteLine(console.Output);
+
+            //Assert
+            Assert.IsFalse(console.Output.Contains("The best show."));
+        }
+
+        [TestMethod]
+        public void GetByTitle_ShouldGetCorrectTitle()
+        {
+
+        }
     }
 }

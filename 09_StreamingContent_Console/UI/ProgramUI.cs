@@ -172,10 +172,6 @@ namespace _09_StreamingContent_Console.UI
                 _console.WriteLine($"{count}. {content.Title}");
             }
 
-            var thing = new List<Show>();
-            var other = thing.ToList<StreamingContent>();
-           
-
             int targetContentId = int.Parse(_console.ReadLine());
             int targetIndex = targetContentId - 1;
             if(targetIndex >= 0 && targetIndex < contentList.Count)
