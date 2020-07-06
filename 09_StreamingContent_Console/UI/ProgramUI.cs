@@ -12,7 +12,6 @@ namespace _09_StreamingContent_Console.UI
     {
         private readonly IConsole _console;
         private readonly StreamingRepository _streamingRepo = new StreamingRepository();
-        
         public ProgramUI(IConsole console)
         {
             _console = console;

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using _09_StreamingContent_Console;
 using _09_StreamingContent_Console.UI;
 using _10_StreamingContent_UIRefactorTests.UI;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -17,43 +18,36 @@ namespace _10_StreamingContent_UIRefactorTests
             MockConsole console = new MockConsole(commandList);
             ProgramUI program = new ProgramUI(console);
 
-            //Act
+            // ACT
             program.Run();
             Console.WriteLine(console.Output);
-
-            //Assert
-            Assert.IsTrue(console.Output.Contains("Avatar the Last Airbender"));
+            // ASSERT
+            Assert.IsTrue(console.Output.Contains("Hitman falls in love or something"));
         }
-
         [TestMethod]
         public void AddToList_ShouldSeeItemInList()
         {
-            //Arrange
-            var customDesc = "This is my custom description";
-            var commandList = new List<string> { "3", "Title", customDesc, "4", "1", "8", "1", "5" };
+            //Arrange 
+            var customDesc = "Hey Hi Hello! This is my Custom Description.";
+            var commandList = new List<string> { "3", "Fake Movie", customDesc, "5", "20", "6", "1", "5" };
             var console = new MockConsole(commandList);
             var ui = new ProgramUI(console);
 
             //ACT
             ui.Run();
             Console.WriteLine(console.Output);
-
-            //Assert
+            //ASSERT
             Assert.IsTrue(console.Output.Contains(customDesc));
         }
-
         [TestMethod]
         public void RemoveFromList_ShouldSeeRemovedMessage()
         {
-            //Arragne
-            var commandList = new List<string> { "4", "2", "1", "5" };
+            //Arrange 
+            List<string> commandList = new List<string> { "4", "2", "1","5"};
             var console = new MockConsole(commandList);
             var ui = new ProgramUI(console);
-
-            //ACT
+            //act 
             ui.Run();
-            Console.WriteLine(console.Output);
-
             //Assert
             Assert.IsFalse(console.Output.Contains("The best show."));
         }
@@ -61,7 +55,21 @@ namespace _10_StreamingContent_UIRefactorTests
         [TestMethod]
         public void GetByTitle_ShouldGetCorrectTitle()
         {
+            // arrange
+            //command list 
+            var fakeUserInput = new List<string> { "2", "Mr. Right", "2","Toy Story","5" };
+            //console
+            var console = new MockConsole(fakeUserInput);
+            //ui
+            var ui = new ProgramUI(console);
 
+            //Act 
+            ui.Run();
+            Console.WriteLine(console.Output);
+            //running the program 
+
+            //Assert 
+            Assert.IsTrue(console.Output.Contains("Genre: Romance"));
         }
     }
 }

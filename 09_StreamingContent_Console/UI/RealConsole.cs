@@ -20,6 +20,7 @@ namespace _09_StreamingContent_Console.UI
         {
             return Console.ReadLine();
         }
+
         public void WriteLine(string s)
         {
             Console.WriteLine(s);

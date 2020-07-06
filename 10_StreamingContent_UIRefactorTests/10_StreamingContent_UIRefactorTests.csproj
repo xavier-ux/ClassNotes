@@ -5,7 +5,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{BD21353B-C209-4DE0-9610-EF085586C46A}</ProjectGuid>
+    <ProjectGuid>{E2D13785-940E-483A-895C-2A21217178F8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>_10_StreamingContent_UIRefactorTests</RootNamespace>
