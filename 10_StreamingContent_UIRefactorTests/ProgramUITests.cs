@@ -57,7 +57,7 @@ namespace _10_StreamingContent_UIRefactorTests
         {
             // arrange
             //command list 
-            var fakeUserInput = new List<string> { "2", "Mr. Right", "2","Toy Story","5" };
+            var fakeUserInput = new List<string> { "2", "Mr. Right","5" };
             //console
             var console = new MockConsole(fakeUserInput);
             //ui
