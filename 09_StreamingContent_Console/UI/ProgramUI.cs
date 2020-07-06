@@ -13,6 +13,7 @@ namespace _09_StreamingContent_Console.UI
         private readonly StreamingRepository _streamingRepo = new StreamingRepository();
         public void Run()
         {
+            SeedContentList();
             RunMenu();
         }
 
@@ -27,7 +28,7 @@ namespace _09_StreamingContent_Console.UI
                     "1. Show all streaming content \n" +
                     "2. Find streaming content by title \n" +
                     "3. Add new streaming content \n" +
-                    "4. remove streaming content \n" +
+                    "4. Remove streaming content \n" +
                     "5. Exit");
                 string userInput = Console.ReadLine();
                 switch (userInput)
@@ -131,6 +132,7 @@ namespace _09_StreamingContent_Console.UI
             foreach (StreamingContent contentVariable in listOfContent)
             {
                 DisplayContent(contentVariable);
+                Console.WriteLine("-----------------------");
             }
 
             Console.WriteLine("Press any key to continue...");
@@ -164,6 +166,10 @@ namespace _09_StreamingContent_Console.UI
                 Console.WriteLine($"{count}. {content.Title}");
             }
 
+            var thing = new List<Show>();
+            var other = thing.ToList<StreamingContent>();
+           
+
             int targetContentId = int.Parse(Console.ReadLine());
             int targetIndex = targetContentId - 1;
             if(targetIndex >= 0 && targetIndex < contentList.Count)
@@ -193,6 +199,17 @@ namespace _09_StreamingContent_Console.UI
                 $"Stars: {content.StarRating} \n" +
                 $"Family Friendly: {content.IsFamilyFriendly} \n" +
                 $"Rating: {content.MaturityRating}");
+        }
+        private void SeedContentList()
+        {
+            StreamingContent movieOne = new StreamingContent("Mr. Right","Hitman falls in love or something",MaturityRating.R,5,GenreType.Romance);
+            StreamingContent movieTwo = new StreamingContent("Avatar the Last Airbender", "The best show.", MaturityRating.PG, 5, GenreType.Comedy);
+            StreamingContent movieThree = new StreamingContent("Toy Story", "A bromance", MaturityRating.G, 3, GenreType.Action);
+
+            _streamingRepo.AddContentToDirectory(movieOne);
+            _streamingRepo.AddContentToDirectory(movieTwo);
+            _streamingRepo.AddContentToDirectory(movieThree);
+
         }
     }
 }
