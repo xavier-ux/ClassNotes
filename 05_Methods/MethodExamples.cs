@@ -26,7 +26,7 @@ namespace _05_Methods
         }
         //1) Access Modifier
         //2) Return Type
-        //3) Method Signature 
+        //3) Method Signature aka name of method 
         //4) Body 
         public void SayHello(string name)
         {

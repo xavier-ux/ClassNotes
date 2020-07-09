@@ -1,0 +1,5 @@
+C:\Users\X\Source\Repos\SD55CSharpNotes\07_RepositoryPattern_Repository\bin\Debug\07_RepositoryPattern_Repository.dll
+C:\Users\X\Source\Repos\SD55CSharpNotes\07_RepositoryPattern_Repository\bin\Debug\07_RepositoryPattern_Repository.pdb
+C:\Users\X\Source\Repos\SD55CSharpNotes\07_RepositoryPattern_Repository\obj\Debug\07_RepositoryPattern_Repository.csproj.CoreCompileInputs.cache
+C:\Users\X\Source\Repos\SD55CSharpNotes\07_RepositoryPattern_Repository\obj\Debug\07_RepositoryPattern_Repository.dll
+C:\Users\X\Source\Repos\SD55CSharpNotes\07_RepositoryPattern_Repository\obj\Debug\07_RepositoryPattern_Repository.pdb

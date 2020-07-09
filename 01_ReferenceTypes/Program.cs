@@ -37,7 +37,7 @@ namespace _01_ReferenceTypes
             Console.WriteLine(interpolatedFullName);
 
             // -- Collections 
-            // Array 
+            // --Array 
             string stringExample = "Hello World!";
             string[] stringArray = { "Hello", "World!", "Why", "is it", "always", stringExample, "?" };
 
@@ -61,7 +61,7 @@ namespace _01_ReferenceTypes
             string firstItem = firstInFirstOut.Dequeue();
             Console.WriteLine(firstItem);
            
-            //Dictionaries 
+            //--Dictionaries 
             Dictionary<int, string> keyAndValue = new Dictionary<int, string>();
             keyAndValue.Add(7, "Agent");
             string valueSeven = keyAndValue[7];
@@ -72,8 +72,8 @@ namespace _01_ReferenceTypes
             HashSet<int> uniqueList = new HashSet<int>();
             Stack<string> lastInFirstOut = new Stack<string>();
 
-            //Classes
-            Random rng = new Random();
+            //--Classes
+            Random rng = new Random();// Random myNewinstanceofAClass = new Random
 
             int randomNumber = rng.Next();
             Console.WriteLine(randomNumber);

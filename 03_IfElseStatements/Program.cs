@@ -54,7 +54,7 @@ namespace _03_IfElseStatements
             string ageInput = Console.ReadLine();
             int age = Convert.ToInt32(ageInput);
 
-            if(age > 17)
+            if(age > 17)// if(true or false statement)
             {
                 Console.WriteLine("Congrats on being an adult");
             }

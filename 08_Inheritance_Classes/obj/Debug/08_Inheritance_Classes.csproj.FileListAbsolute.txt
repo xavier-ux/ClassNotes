@@ -1,0 +1,5 @@
+C:\Users\X\Source\Repos\SD55CSharpNotes\08_Inheritance_Classes\bin\Debug\08_Inheritance_Classes.dll
+C:\Users\X\Source\Repos\SD55CSharpNotes\08_Inheritance_Classes\bin\Debug\08_Inheritance_Classes.pdb
+C:\Users\X\Source\Repos\SD55CSharpNotes\08_Inheritance_Classes\obj\Debug\08_Inheritance_Classes.csproj.CoreCompileInputs.cache
+C:\Users\X\Source\Repos\SD55CSharpNotes\08_Inheritance_Classes\obj\Debug\08_Inheritance_Classes.dll
+C:\Users\X\Source\Repos\SD55CSharpNotes\08_Inheritance_Classes\obj\Debug\08_Inheritance_Classes.pdb

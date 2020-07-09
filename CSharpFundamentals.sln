@@ -35,6 +35,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09_StreamingContent_Console
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10_StreamingContent_UIRefactorTests", "10_StreamingContent_UIRefactorTests\10_StreamingContent_UIRefactorTests.csproj", "{E2D13785-940E-483A-895C-2A21217178F8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "99_pair_programming", "99_pair_programming\99_pair_programming.csproj", "{303A82FF-3BC6-46E9-966C-5E7B67FB4B41}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "98_Pratice", "98_Pratice\98_Pratice.csproj", "{42E9073D-7A68-44F3-B922-960CB98682C5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -105,6 +109,14 @@ Global
 		{E2D13785-940E-483A-895C-2A21217178F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E2D13785-940E-483A-895C-2A21217178F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E2D13785-940E-483A-895C-2A21217178F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{303A82FF-3BC6-46E9-966C-5E7B67FB4B41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{303A82FF-3BC6-46E9-966C-5E7B67FB4B41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{303A82FF-3BC6-46E9-966C-5E7B67FB4B41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{303A82FF-3BC6-46E9-966C-5E7B67FB4B41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42E9073D-7A68-44F3-B922-960CB98682C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42E9073D-7A68-44F3-B922-960CB98682C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42E9073D-7A68-44F3-B922-960CB98682C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42E9073D-7A68-44F3-B922-960CB98682C5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

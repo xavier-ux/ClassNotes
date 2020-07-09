@@ -1,0 +1,6 @@
+C:\Users\X\Source\Repos\SD55CSharpNotes\04_Loops\bin\Debug\04_Loops.exe.config
+C:\Users\X\Source\Repos\SD55CSharpNotes\04_Loops\bin\Debug\04_Loops.exe
+C:\Users\X\Source\Repos\SD55CSharpNotes\04_Loops\bin\Debug\04_Loops.pdb
+C:\Users\X\Source\Repos\SD55CSharpNotes\04_Loops\obj\Debug\04_Loops.csproj.CoreCompileInputs.cache
+C:\Users\X\Source\Repos\SD55CSharpNotes\04_Loops\obj\Debug\04_Loops.exe
+C:\Users\X\Source\Repos\SD55CSharpNotes\04_Loops\obj\Debug\04_Loops.pdb

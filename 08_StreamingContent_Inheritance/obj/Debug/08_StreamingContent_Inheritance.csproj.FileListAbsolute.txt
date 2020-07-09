@@ -1,0 +1,9 @@
+C:\Users\X\Source\Repos\SD55CSharpNotes\08_StreamingContent_Inheritance\bin\Debug\08_StreamingContent_Inheritance.dll
+C:\Users\X\Source\Repos\SD55CSharpNotes\08_StreamingContent_Inheritance\bin\Debug\08_StreamingContent_Inheritance.pdb
+C:\Users\X\Source\Repos\SD55CSharpNotes\08_StreamingContent_Inheritance\bin\Debug\07_RepositoryPattern_Repository.dll
+C:\Users\X\Source\Repos\SD55CSharpNotes\08_StreamingContent_Inheritance\bin\Debug\07_RepositoryPattern_Repository.pdb
+C:\Users\X\Source\Repos\SD55CSharpNotes\08_StreamingContent_Inheritance\obj\Debug\08_StreamingContent_Inheritance.csprojAssemblyReference.cache
+C:\Users\X\Source\Repos\SD55CSharpNotes\08_StreamingContent_Inheritance\obj\Debug\08_StreamingContent_Inheritance.csproj.CoreCompileInputs.cache
+C:\Users\X\Source\Repos\SD55CSharpNotes\08_StreamingContent_Inheritance\obj\Debug\08_StreamingContent_Inheritance.csproj.CopyComplete
+C:\Users\X\Source\Repos\SD55CSharpNotes\08_StreamingContent_Inheritance\obj\Debug\08_StreamingContent_Inheritance.dll
+C:\Users\X\Source\Repos\SD55CSharpNotes\08_StreamingContent_Inheritance\obj\Debug\08_StreamingContent_Inheritance.pdb
